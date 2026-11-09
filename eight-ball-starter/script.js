@@ -75,20 +75,11 @@ function askEightBall()
         break;
 }
 
-
-
   //Show the eight ball's answer type badge
-
-document.getElementById("answer").textContent = eightBall;
-
-const answerType = document.getElementById("answerType");
-if (randomNumber <= 2) {
-  answerType.textContent = "Yes";
-} else if (randomNumber <= 5) {
-  answerType.textContent = "Maybe";
-} else {
-  answerType.textContent = "No";
-}
-  
+  if (randomNumber <= 2) {
+    document.getElementById("answerType").innerHTML = <span class = "yes">Yes</span>
+    document.getElementById("answertype").innerHTML = <span class = "maybe">Maybe</span>
+    document.getElementById("answertype").innerHTML = <span class = "no">No</span>
+  }
 }
 
