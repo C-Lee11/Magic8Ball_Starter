@@ -43,9 +43,52 @@ function askEightBall()
 
   //Get a random number
   
-  Number(Math.random() * 7 ) + 1
+  let randomNumber = Math.floor(Math.random() * 8);
+
+  let eightBall = '';
+
   //Get the magic eight ball's answer
+  switch (randomNumber) {
+    case 0:
+        eightBall = 'It is certain';
+        break;
+    case 1:
+        eightBall = 'It is decidedly so';
+        break;
+    case 2:
+        eightBall = 'Reply hazy try again';
+        break;
+    case 3:
+        eightBall = 'Cannot predict now';
+        break;
+    case 4:
+        eightBall = 'Do not count on it';
+        break;
+    case 5:
+        eightBall = 'My sources say no';
+        break;
+    case 6:
+        eightBall = 'Outlook not so good';
+        break;
+    case 7:
+        eightBall = 'Signs point to yes';
+        break;
+}
+
+
 
   //Show the eight ball's answer type badge
+
+document.getElementById("answer").textContent = eightBall;
+
+const answerType = document.getElementById("answerType");
+if (randomNumber <= 2) {
+  answerType.textContent = "Yes";
+} else if (randomNumber <= 5) {
+  answerType.textContent = "Maybe";
+} else {
+  answerType.textContent = "No";
+}
+  
 }
 
